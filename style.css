@@ -1,0 +1,295 @@
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #f4f8ff;
+color: #1d2b53;
+}
+
+/* Header */
+
+header {
+background: #0b5ed7;
+color: white;
+padding: 18px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.logo {
+font-size: 25px;
+font-weight: bold;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 25px;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #b9dcff;
+}
+
+/* Hero */
+
+.hero {
+min-height: 500px;
+padding: 80px 10%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: linear-gradient(135deg, #eaf4ff, #cce5ff);
+}
+
+.hero-content {
+max-width: 600px;
+}
+
+.hero h1 {
+font-size: 52px;
+margin-bottom: 20px;
+color: #073b8c;
+}
+
+.hero p {
+font-size: 19px;
+line-height: 1.7;
+margin-bottom: 30px;
+color: #40516f;
+}
+
+button {
+background: #0b5ed7;
+color: white;
+border: none;
+padding: 12px 24px;
+border-radius: 7px;
+cursor: pointer;
+font-size: 15px;
+transition: 0.3s;
+}
+
+button:hover {
+background: #084298;
+transform: translateY(-2px);
+}
+
+.cloud-icon {
+font-size: 180px;
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+0%, 100% {
+transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-20px);
+}
+
+
+}
+
+/* Services */
+
+.services,
+.usage,
+.about {
+padding: 70px 8%;
+}
+
+h2 {
+text-align: center;
+font-size: 34px;
+margin-bottom: 40px;
+color: #073b8c;
+}
+
+.service-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+}
+
+.service-card {
+background: white;
+padding: 30px 20px;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 5px 20px rgba(0, 60, 130, 0.1);
+transition: 0.3s;
+}
+
+.service-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 10px 25px rgba(0, 60, 130, 0.18);
+}
+
+.icon {
+font-size: 45px;
+margin-bottom: 15px;
+}
+
+.service-card h3 {
+margin-bottom: 12px;
+color: #164a9c;
+}
+
+.service-card p {
+color: #667085;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+/* Usage */
+
+.usage {
+background: #eaf3ff;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.stat-card {
+background: white;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 5px 15px rgba(0, 60, 130, 0.1);
+}
+
+.stat-card h3 {
+color: #555;
+}
+
+.number {
+font-size: 35px;
+font-weight: bold;
+margin: 15px 0;
+color: #0b5ed7;
+}
+
+.progress {
+width: 100%;
+height: 12px;
+background: #e1e5ea;
+border-radius: 20px;
+overflow: hidden;
+margin-bottom: 10px;
+}
+
+.progress-bar {
+height: 100%;
+border-radius: 20px;
+}
+
+.storage {
+width: 68%;
+background: #0b5ed7;
+}
+
+.cpu {
+width: 42%;
+background: #20a464;
+}
+
+.bandwidth {
+width: 75%;
+background: #f59f00;
+}
+
+.stat-card span {
+color: #777;
+}
+
+/* About */
+
+.about {
+text-align: center;
+}
+
+.about p {
+max-width: 800px;
+margin: auto;
+line-height: 1.8;
+font-size: 17px;
+color: #596579;
+}
+
+/* Footer */
+
+footer {
+background: #073b8c;
+color: white;
+text-align: center;
+padding: 25px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+.service-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stats {
+    grid-template-columns: 1fr;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.cloud-icon {
+    font-size: 120px;
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+header {
+    flex-direction: column;
+    gap: 15px;
+}
+
+nav a {
+    margin: 0 7px;
+    font-size: 14px;
+}
+
+.hero {
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hero h1 {
+    font-size: 35px;
+}
+
+.service-container {
+    grid-template-columns: 1fr;
+}
+
+
+}
